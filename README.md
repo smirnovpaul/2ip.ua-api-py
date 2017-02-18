@@ -12,7 +12,8 @@
 * **providers\_by\_ips()**: информация о провайдерах на основе IP-адресов с валидацией и проверкой на локальные
 
 [Официальный сайт](https://2ip.ua/ru)
-[Описание доступного API](https://2ip.ua/ru/api/our-api)
+[Описание доступного API](https://2ip.u
+a/ru/api/our-api)
 
 ### Установка:
 
@@ -27,15 +28,19 @@ pip install -r requirements.txt
 MIT
 
 
-Пример использования:
+### Пример:
 
 Инициализация:
+
 ```python
 from api import IpAddressApiInfo
 from utils import providers_by_ips
 
 # получаем список интересующих IP-адресов
-ip = ['10.0.0.0', '192.168.1.10', '8.8.8.8', '100.100.100.1', '101.25.25.25', '192.168.1.1', '172.169.0.0.', '1444.0101', '5.45.65.4', '32.32.32.8', '54.79.44.1']
+ip = ['10.0.0.0', '192.168.1.10', '8.8.8.8',
+      '100.100.100.1', '101.25.25.25', '192.168.1.1',
+      '172.169.0.0.', '1444.0101', '5.45.65.4',
+      '32.32.32.8', '54.79.44.1']
 
 providers_by_ips(ip)
 ```
@@ -43,13 +48,13 @@ providers_by_ips(ip)
 Ответ:
 ```json
 {
-    'Google Inc.': 1,
-    'Invalid_ip': 2,  # Невалидные IP-адреса
-    'CNC Group': 1,
-    'Serverius Holding B.V.': 1,
-    'Amazon.com Inc.': 1,
-    'Locals_ip': 4,  # Локальные IP-адреса
-    'AT&T Inc.': 1
+    "Google Inc.": 1,
+    "Invalid_ip": 2,  // Невалидные IP-адреса
+    "CNC Group": 1,
+    "Serverius Holding B.V.": 1,
+    "Amazon.com Inc.": 1,
+    "Locals_ip": 4,  // Локальные IP-адреса
+    "AT&T Inc.": 1
 }
 
 ```
