@@ -49,11 +49,11 @@ providers_by_ips(ip)
 ```json
 {
     "Google Inc.": 1,
-    "Invalid_ip": 2,  //
+    "Invalid_ip": 2,
     "CNC Group": 1,
     "Serverius Holding B.V.": 1,
     "Amazon.com Inc.": 1,
-    "Locals_ip": 4,  // Локальные IP-адреса
+    "Locals_ip": 4,
     "AT&T Inc.": 1
 }
 ```

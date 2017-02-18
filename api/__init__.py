@@ -12,7 +12,7 @@ class IpAddressApiInfo(object):
     def __init__(self, email=None, ip=None, site=None, timeout=6):
         """
         Описание доступных методов API.
-        Ограничено 100 запросами с 1-го IP-адреса.
+        Ограничено 100 запросами с одного IP-адреса.
 
         https://2ip.ua/ru/api/our-api
 
