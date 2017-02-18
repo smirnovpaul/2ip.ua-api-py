@@ -12,8 +12,8 @@
 * **providers\_by\_ips()**: информация о провайдерах на основе IP-адресов с валидацией и проверкой на локальные
 
 [Официальный сайт](https://2ip.ua/ru)
-[Описание доступного API](https://2ip.u
-a/ru/api/our-api)
+
+[Описание доступного API](https://2ip.ua/ru/api/our-api)
 
 ### Установка:
 
@@ -49,12 +49,14 @@ providers_by_ips(ip)
 ```json
 {
     "Google Inc.": 1,
-    "Invalid_ip": 2,  // Невалидные IP-адреса
+    "Invalid_ip": 2,  //
     "CNC Group": 1,
     "Serverius Holding B.V.": 1,
     "Amazon.com Inc.": 1,
     "Locals_ip": 4,  // Локальные IP-адреса
     "AT&T Inc.": 1
 }
-
 ```
+
+* Invalid\_ip - Невалидный IP-адрес;
+* Locals\_ip - Локальные IP-адреса.
