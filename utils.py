@@ -15,7 +15,7 @@ def providers_by_ips(ips):
           192.168.0.0/16
     IPv6: fc00::/7
 
-    Происходит валидация IP-адреса.
+    Валидация IP-адреса.
 
     ARGUMENTS:
         :param list ips:
