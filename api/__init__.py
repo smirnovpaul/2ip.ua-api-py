@@ -70,7 +70,7 @@ class IpAddressApiInfo(object):
         return self.__connect(payload)
 
     @property
-    def get_provider(self):
+    def provider(self):
         """
         Получение информации о провайдере данного IP-адреса.
 
@@ -107,7 +107,7 @@ class IpAddressApiInfo(object):
         return self.__connect(payload)
 
     @property
-    def get_geo(self):
+    def geo(self):
         """
         Получение информации о предположительных геоданных данного IP-адреса.
 
@@ -150,7 +150,7 @@ class IpAddressApiInfo(object):
         return self.__connect(payload)
 
     @property
-    def get_hosting(self):
+    def hosting(self):
         """
         Информация о хостинге.
 

@@ -26,9 +26,9 @@ def providers_by_ips(ips):
         try:
             ip = IPNetwork(ip)
             local = ip.is_private()
-            name_company = "Locals_ip" if local else get_provider(ip.ip)
+            name_company = "Local IP" if local else get_provider(ip.ip)
         except AddrFormatError:
-            name_company = "Invalid_ip"
+            name_company = "Invalid IP"
         companies[name_company] += 1
     return companies
 
