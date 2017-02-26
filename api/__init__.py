@@ -5,7 +5,7 @@ import requests
 # В случае логгирования в папку OS Windows '/'; OS Linux '\'
 FORMAT = "%(asctime)s [%(levelname)s] [%(filename)s %(lineno)d] %(funcName)s: %(message)s"
 FILE_NAME = "log/log.log"
-logger = logging.basicConfig(format=FORMAT, level=logging.DEBUG, filename=FILE_NAME)
+LOGGER = logging.basicConfig(format=FORMAT, level=logging.DEBUG, filename=FILE_NAME)
 
 
 class IpAddressApiInfo(object):
@@ -39,19 +39,19 @@ class IpAddressApiInfo(object):
         try:
             r = requests.get(''.join((self.url, self.api)), params=payload, timeout=self.timeout)
         except (requests.RequestException, requests.Timeout) as e:
-            logger.error("Ошибка выполнения запроса {}: {}".format(self.message, e))
+            LOGGER.error("Ошибка выполнения запроса {}: {}".format(self.message, e))
             return None
 
         try:
             r.raise_for_status()
         except requests.HTTPError as e:
-            logger.error("Ошибка выполнения запроса {}: {}".format(self.message, e))
+            LOGGER.error("Ошибка выполнения запроса {}: {}".format(self.message, e))
             return None
 
         try:
             json = r.json()
         except ValueError as e:
-            logger.error("Ошибка выполнения запроса {}: {}".format(self.message, e))
+            LOGGER.error("Ошибка выполнения запроса {}: {}".format(self.message, e))
             return None
         else:
             return json
